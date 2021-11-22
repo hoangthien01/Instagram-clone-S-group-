@@ -5,11 +5,11 @@
         <img src="@/static/img/bg-login.png" alt="" srcset="" />
           <div class="slider">
             <transition name="fade" mode="out-in">
-              <img v-if="imageID === 1" class="slider-image" src="@/static/img/bg-login1.jpg" alt="" srcset=""/>
-              <img v-if="imageID === 2" class="slider-image" src="@/static/img/bg-login2.jpg" alt="" srcset=""/>
-              <img v-if="imageID === 3" class="slider-image" src="@/static/img/bg-login3.jpg" alt="" srcset=""/>
-              <img v-if="imageID === 4" class="slider-image" src="@/static/img/bg-login4.jpg" alt="" srcset=""/>
-              <img v-if="imageID === 5" class="slider-image" src="@/static/img/bg-login5.jpg" alt="" srcset=""/>
+              <img v-if="imageID == 1" class="slider-image" src="@/static/img/bg-login1.jpg" alt="" srcset=""/>
+              <img v-if="imageID == 2" class="slider-image" src="@/static/img/bg-login2.jpg" alt="" srcset=""/>
+              <img v-if="imageID == 3" class="slider-image" src="@/static/img/bg-login3.jpg" alt="" srcset=""/>
+              <img v-if="imageID == 4" class="slider-image" src="@/static/img/bg-login4.jpg" alt="" srcset=""/>
+              <img v-if="imageID == 5" class="slider-image" src="@/static/img/bg-login5.jpg" alt="" srcset=""/>
             </transition>
           </div>
       </div>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="login-content__middle">
-          <p>Bạn chưa có tài khoản ư? <span>Đăng kí</span></p>
+          <p>Bạn chưa có tài khoản ư? <span @click="navigateRegister">Đăng kí</span></p>
         </div>
         <div class="login-content__bottom">
           <p>Tải ứng dụng</p>
@@ -116,6 +116,11 @@ export default {
         this.imageID++
       }
     },3500)
+  },
+   methods: {
+    navigateRegister() {
+      this.$router.push('/auth/register')
+    }
   }
 }
 </script>
