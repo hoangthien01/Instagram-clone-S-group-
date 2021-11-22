@@ -3,6 +3,15 @@
     <div class="login-content">
       <div class="login-content__bg">
         <img src="@/static/img/bg-login.png" alt="" srcset="" />
+          <div class="slider">
+            <transition name="fade" mode="out-in">
+              <img v-if="imageID === 1" class="slider-image" src="@/static/img/bg-login1.jpg" alt="" srcset=""/>
+              <img v-if="imageID === 2" class="slider-image" src="@/static/img/bg-login2.jpg" alt="" srcset=""/>
+              <img v-if="imageID === 3" class="slider-image" src="@/static/img/bg-login3.jpg" alt="" srcset=""/>
+              <img v-if="imageID === 4" class="slider-image" src="@/static/img/bg-login4.jpg" alt="" srcset=""/>
+              <img v-if="imageID === 5" class="slider-image" src="@/static/img/bg-login5.jpg" alt="" srcset=""/>
+            </transition>
+          </div>
       </div>
       <div class="login-content__info">
         <div class="login-content__head">
@@ -89,26 +98,59 @@ export default {
         name: '',
         passWord: '',
       },
-       rules: {
-          name: [
-            { required: true, message: 'Please input your name', trigger:  ['change'] },
-          ],
-          passWord: [
-            { required: true, message: 'Please input your password', trigger: ['change','blur'] }
-          ],
-        }
+      rules: {
+        name: [
+          { required: true, message: 'Please input your name', trigger:  ['change'] },
+        ],
+        passWord: [
+          { required: true, message: 'Please input your password', trigger: ['change','blur'] }
+        ],
+      },
+      imageID : 1
     }
   },
+  mounted() {
+    setInterval(() => {
+      if (this.imageID === 5) { this.imageID = 1 }
+      else {
+        this.imageID++
+      }
+    },3500)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1s ease;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 .login-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   flex-direction: column;
+
+  .login-content__bg {
+    position: relative;
+
+    .slider {
+      position: absolute;
+      top: 95px;
+      left: 147px;
+      width: 247px;
+      height: 436px;
+      object-fit: cover;
+
+      .slider-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   
   .login-content {
     display: flex;
