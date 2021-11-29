@@ -18,19 +18,24 @@
 
     <div class="navbar-actions">
       <div class="navbar-actions__item">
-        <fa icon="home"/>
+        <img v-show="navActive !== 'home'" @click="changeActiveNav('home')" src="@/static/img/homeWhite.png" alt="" srcset="">
+        <img v-show="navActive === 'home'" src="@/static/img/home.png" alt="" srcset="">
       </div>
       <div class="navbar-actions__item">
-        <fa :icon="['far', 'comment-dots']"/>
+        <img v-show="navActive !== 'direct'" @click="changeActiveNav('direct')" src="@/static/img/directWhite.png" alt="" srcset="">
+        <img v-show="navActive === 'direct'" src="@/static/img/direct.png" alt="" srcset="">
       </div>
       <div class="navbar-actions__item">
-        <fa :icon="['far', 'plus-square']"/>
+        <img v-show="navActive !== 'add'" @click="changeActiveNav('add')" src="@/static/img/addWhite.png" alt="" srcset="">
+        <img v-show="navActive === 'add'" src="@/static/img/add.png" alt="" srcset="">
       </div>
       <div class="navbar-actions__item">
-        <fa :icon="['far', 'compass']"/>
+        <img v-show="navActive !== 'compass'" @click="changeActiveNav('compass')" src="@/static/img/compassWhite.png" alt="" srcset="">
+        <img v-show="navActive === 'compass'" src="@/static/img/compass.png" alt="" srcset="">
       </div>
       <div class="navbar-actions__item">
-        <fa :icon="['far', 'heart']"/>
+        <img v-show="navActive !== 'heart'" @click="changeActiveNav('heart')" src="@/static/img/heartWhite.png" alt="" srcset="">
+        <img v-show="navActive === 'heart'" src="@/static/img/heart.png" alt="" srcset="">
       </div>
       <div class="navbar-actions__item">
         <el-avatar  size="small" ></el-avatar>
@@ -47,7 +52,13 @@ export default {
   name:'Navbar',
   data() {
     return {
-      searchInp: ''
+      searchInp: '',
+      navActive: 'home'
+    }
+  },
+  methods : {
+    changeActiveNav(data) {
+      this.navActive = data
     }
   }
 
@@ -103,9 +114,8 @@ export default {
         margin-left: 22px;
         cursor: pointer;
 
-        .svg-inline--fa {
-          font-size: 23px;
-          color: #181717;
+        img {
+          width: 23px;
         }
       }
 
