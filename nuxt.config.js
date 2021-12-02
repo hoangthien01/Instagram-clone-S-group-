@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'instagram',
+    title: 'Instagram',
     htmlAttrs: {
       lang: 'en'
     },
@@ -38,7 +38,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/fontawesome'
   ],
+
+  fontawesome: {
+    component: 'fa',
+    icons: {
+      solid: true,
+      brands: true,
+      regular : true
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

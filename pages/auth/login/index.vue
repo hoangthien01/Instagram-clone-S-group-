@@ -29,7 +29,7 @@
               </el-form-item>
             </el-form>
 
-            <div class="line">
+           <div class="line">
               HOẶC
             </div>
             <div class="login-content__facebook">
