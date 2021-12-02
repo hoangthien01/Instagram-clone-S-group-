@@ -83,7 +83,6 @@
         <span>English</span>
         <span>English© 2021 Instagram from Meta</span>       
       </div>
-
     </footer>
   </div>
 </template>
