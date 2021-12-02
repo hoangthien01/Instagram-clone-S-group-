@@ -2,16 +2,18 @@
   <div class="home-container">
     <div class="home-main">
       <Story/>
+      <Post/>
     </div>
   </div>
 </template>
 
 <script>
 import Story from '@/components/story'
+import Post from '@/components/post'
 export default {
   name:'Home',
   components : {
-    Story
+    Story,Post
   },
   layout: 'default'
 }

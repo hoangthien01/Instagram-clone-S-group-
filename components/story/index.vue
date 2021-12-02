@@ -137,7 +137,8 @@ export default {
         "slidesToScroll": 4,
         "touchThreshold": 5,
         "dotsClass": 'slick-dots',
-        "infinite": false
+        "infinite": false,
+        "touchMove" : false
       }
     }
   },
