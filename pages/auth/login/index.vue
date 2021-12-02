@@ -29,7 +29,7 @@
               </el-form-item>
             </el-form>
 
-           <div class="line">
+            <div class="line">
               HOẶC
             </div>
             <div class="login-content__facebook">
@@ -83,6 +83,7 @@
         <span>English</span>
         <span>English© 2021 Instagram from Meta</span>       
       </div>
+
     </footer>
   </div>
 </template>
@@ -137,10 +138,8 @@ export default {
   justify-content: center;
   height: 100%;
   flex-direction: column;
-
   .login-content__bg {
     position: relative;
-
     .slider {
       position: absolute;
       top: 95px;
@@ -148,7 +147,6 @@ export default {
       width: 247px;
       height: 436px;
       object-fit: cover;
-
       .slider-image {
         width: 100%;
         height: 100%;
@@ -160,11 +158,9 @@ export default {
     display: flex;
     align-items: flex-start;
     padding: 30px 0 10px;
-
     &__info {
       height: 100%;
       width: 350px;
-
       .login-content__head {
         background-color: #fff;
         padding: 10px 35px 24px;
@@ -172,7 +168,6 @@ export default {
         margin-top: 30px;
         min-width: 348px;
         box-sizing: border-box;
-
         .login-content__title {
           font-size: 30px;
           text-align: center;
@@ -183,29 +178,23 @@ export default {
           height: 51px;
           width: 175px;
         }
-
         .login-content__form {
           text-align: center;
-
           .el-form-item {
             margin-bottom: 20px;
-
             .el-input {
               font-size: 13px;
             }
           }
-
           .line {
             font-size: 13px;
           }
-
           .login-content__facebook {
             margin:20px 0 0 ;
             font-size: 14px;
             color: #385185;
             font-weight: 600;
             cursor: pointer;
-
             &-image {
               background-image: url('~static/img/main.png');
               background-repeat: no-repeat;
@@ -218,20 +207,17 @@ export default {
               top: 3px;
             }
           }
-
           .login-content__forgot_password {
             margin-top: 10px;
             font-size: 12px;
             cursor: pointer;
             color: #00376b;
           }
-
           .btn-login {
             width: 100%;
           }
         }
       }
-
       .login-content__middle {
         margin-top: 20px;
         border: 1px solid #ccc;
@@ -245,12 +231,10 @@ export default {
           cursor: pointer;
         }
       }
-
       .login-content__bottom {
         text-align: center;
         margin-top: 10px;
         font-size: 13px;
-
         .download {
           margin-top: 10px;
           .download-img {
@@ -261,15 +245,12 @@ export default {
       }
     }
   }
-
   .footer {
     text-align: center;
     color: #8e8e8e;
-
     &-item {
       margin-top: 5px;
       font-size: 12px;
-
       span {
         margin: 0 5px;
       }
