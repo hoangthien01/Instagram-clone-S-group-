@@ -4,13 +4,13 @@
       <div class="login-content__bg">
         <img src="@/static/img/bg-login.png" alt="" srcset="" />
           <div class="slider">
-            <transition name="fade" mode="out-in">
+            <!-- <transition name="fade" mode="out-in">
               <img v-if="imageID == 1" class="slider-image" src="@/static/img/bg-login1.jpg" alt="" srcset=""/>
               <img v-if="imageID == 2" class="slider-image" src="@/static/img/bg-login2.jpg" alt="" srcset=""/>
               <img v-if="imageID == 3" class="slider-image" src="@/static/img/bg-login3.jpg" alt="" srcset=""/>
               <img v-if="imageID == 4" class="slider-image" src="@/static/img/bg-login4.jpg" alt="" srcset=""/>
               <img v-if="imageID == 5" class="slider-image" src="@/static/img/bg-login5.jpg" alt="" srcset=""/>
-            </transition>
+            </transition> -->
           </div>
       </div>
       <div class="login-content__info">
@@ -147,9 +147,11 @@ export default {
       width: 247px;
       height: 436px;
       object-fit: cover;
+      background: red;
       .slider-image {
         width: 100%;
         height: 100%;
+        display: none;
       }
     }
   }
